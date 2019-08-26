@@ -1,10 +1,10 @@
 # lyttapp
-Real chat time application in Ruby on Rails and React
+Real chat time application in Express and React
 n order to develop the real chat time application I followed these steps: 
 
 1- Create a repository on GitHub with an SSH key
 
-2 - Set up the server for Ruby on rails using home-brew, installing Ruby, Rails, a database (sqlite3), installing mysql, postgreSQL.
+2 - Set up the server for Express.
 
 3 - Create an homepage in which are displayed the message - request sent by the users throughout the component build in React with a simple text - box  in which the user write the message to send the request to the back end texting the language as well) with the button. 
 If  the user asks for the right language that is in the database you got the Response success, 
