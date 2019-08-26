@@ -1,10 +1,18 @@
 # lyttapp
+<<<<<<< HEAD
 Real chat time application in  React
+=======
+Real chat time application in Express and React
+>>>>>>> be7799b2fb7d67216974723af2f76ddfaae72075
 n order to develop the real chat time application I followed these steps: 
 
 1- Create a repository on GitHub with an SSH key
 
+<<<<<<< HEAD
 2 - Set up the server for express and node
+=======
+2 - Set up the server for Express.
+>>>>>>> be7799b2fb7d67216974723af2f76ddfaae72075
 
 3 - Create an homepage in which are displayed the message - request sent by the users throughout the component build in React with a simple text - box  in which the user write the message to send the request to the back end texting the language as well) with the button. 
 If  the user asks for the right language that is in the database you got the Response success, 
