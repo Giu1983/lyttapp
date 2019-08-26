@@ -21,4 +21,3 @@ Event connection will be listening for incoming sockets.
 
 The database provider will be Mysql
 
-There will be a separate gemset for the application.
