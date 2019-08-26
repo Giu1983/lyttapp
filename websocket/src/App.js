@@ -1,40 +1,27 @@
 import React, {Component} from 'react';
 import Chat from './Components/Chat'; 
-import SockJS from 'sockjs-client'; 
 
+import { connect } from 'react-redux'; 
+import { bindActionCreators } from 'redux'; 
+
+import * as Action from './Action.js/index';
+
+function mapStateToProps(state) {
+   return{
+     message: state.message.messages
+   }; 
+}
+
+function mapDispatchToProps(dispatch){
+   return{
+     actions: bindActionCreators(ChatActions, dispatch)
+   }; 
+}
 class App extends Component {
-  constructor(props){
-    super(props); 
-  
-  //function to create a socket connection
-  var sock = new SockJS("https://mydomain.com/my_prefix")
-  
-  sock.onopen = function(){
-    console.log('connection open'); 
-      }; 
-
-   let self = this;
-
-  sock.onmessage = function(e) {
-    console.log('message received', e.data);
-    //message from server
-    self.setState({ messagges: [...self.state.messages, e.data]}); 
-};
-  
-  sock.onclose = () =>{
-    console.log('close'); 
-  };
-
-   this.state = {
-     actions: sock,
-     message: []
-   }
-
-  }
-  render(){
+ render(){
     return (
       <div className="App">
-      <Chat {...this.state } />
+      <Chat {...this.props } />
       </div>
     )
   } 
@@ -43,5 +30,5 @@ class App extends Component {
   
 }
 
-
-export default App;
+//I connect the component in the store
+export default connect(mapStateToProps, mapDispatchToProps)(App);
