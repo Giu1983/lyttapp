@@ -17,7 +17,7 @@ class Chat extends Component {
        //function to get the data-message
         let i = 0,                      
           messagges = this.props.messagges.map(message => {
-              return<li className="list-group-item" key={i++}>{message}</li>
+              return<li className="list-group-item" key={id}>{message}</li>
           })
 
         return(
